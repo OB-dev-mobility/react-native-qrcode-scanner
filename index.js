@@ -15,7 +15,7 @@ import {
   PermissionsAndroid,
 } from 'react-native';
 
-import { request, PERMISSIONS, RESULTS } from 'react-native-permissions';
+//import { request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import { RNCamera as Camera } from 'react-native-camera';
 
 const CAMERA_FLASH_MODE = Camera.Constants.FlashMode;
@@ -117,6 +117,7 @@ export default class QRCodeScanner extends Component {
   }
 
   componentDidMount() {
+    /*
     if (Platform.OS === 'ios') {
       request(PERMISSIONS.IOS.CAMERA).then((cameraStatus) => {
         this.setState({
@@ -138,7 +139,8 @@ export default class QRCodeScanner extends Component {
       });
     } else {
       this.setState({ isAuthorized: true, isAuthorizationChecked: true });
-    }
+    }*/
+    
 
     if (this.props.fadeIn) {
       Animated.sequence([
